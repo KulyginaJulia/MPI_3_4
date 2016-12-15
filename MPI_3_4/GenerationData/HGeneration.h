@@ -7,6 +7,6 @@
 #include "string.h"
 
 void Generation(long int N);
-void Testing(FILE* A, FILE* B, int count);
+//bool Testing(FILE* A, FILE* B, int count);
 
 #endif

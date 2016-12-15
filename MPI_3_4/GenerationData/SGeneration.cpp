@@ -15,21 +15,3 @@ void Generation(long int N) {
 	free(s);
 }
 
-void Testing(FILE* A, FILE* B, int count) {
-	bool flag = true;
-	char* ch_1 = (char*)malloc(count*sizeof(char));
-	char* ch_2 = (char*)malloc(count * sizeof(char));
-	while (!feof(A) && !feof(B))
-	{
-		fgets(ch_1, count, A);
-		fgets(ch_2, count, B);
-		if (strcmp(ch_1, ch_2)) {
-			flag = false;
-			printf_s("Uncorrect!");
-		}	
-	}
-
-	if (flag == true) {
-		printf_s("Correct!");
-	}
-}

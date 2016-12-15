@@ -2,6 +2,7 @@
 #include "Function.h"
 #include "HGeneration.h"
 #include "Header.h"
+#include "string.h"
 
 unsigned char decode_stack[4000];
 unsigned int * code_value = (unsigned int *)malloc(TABLE_SIZE * sizeof(unsigned int));
@@ -23,7 +24,6 @@ int main(int argc, char *argv[]){
 	if (argc >= 2) {
 		Count = atoi(argv[1]);
 	}
-//	Count = 50;
 	MPI_Status status;
 	MPI_Init(&argc, &argv);
 
@@ -59,7 +59,8 @@ int main(int argc, char *argv[]){
 			exit(1);
 		}
 		expand(lzw_file, output_file);
-
+		fclose(output_file);
+		fopen_s(&lzw_file, "testout.txt", "rb");
 		Testing(output_file, input_file, Count);
 
 		fclose(lzw_file);
@@ -114,10 +115,10 @@ int main(int argc, char *argv[]){
 //		int *temp;
 //		StructTable temp;// = malloc(sizeof(StructTable));
 //		unsigned int * temp_code_value = (unsigned int *)malloc(TABLE_SIZE * sizeof(unsigned int));
-		int i;
+		int i, j;
 		time1 = MPI_Wtime();
 		unsigned int *temp_code = (unsigned int *)malloc(TABLE_SIZE * sizeof(unsigned int));
-		unsigned int **out_code = (unsigned int **)malloc((ProcNum) *TABLE_SIZE* sizeof(unsigned int));
+		unsigned int **out_code = (unsigned int **)malloc((ProcNum+1) *TABLE_SIZE* sizeof(unsigned int));
 		for (i = 1; i < ProcNum; i++)
 			out_code[i] = temp_code;
 		fopen_s(&input_file, "test.txt", "rb");
@@ -145,11 +146,17 @@ int main(int argc, char *argv[]){
 			temp_out = temp_out + dataSize;
 			MPI_Recv(out_code[i], TABLE_SIZE, MPI_UNSIGNED, i, 0, MPI_COMM_WORLD, &status);
 		}
-	//сли€ние массивов кодов
-//
-//		if (deltaSize != 0) {
-//			compress(tempv, deltaSize, out_str);
-//		}
+	
+		j = ProcNum;//конец массива массивов кодов. jый должен быть последним
+		if (deltaSize != 0) {
+			out_str = compress(str_file,deltaSize, out_str, out_code[ProcNum+1]);
+			j = ProcNum + 1;
+		}
+		/**/i = 2;
+		while (i<j) {
+			out_code[i] = Merge(out_code[i], out_code[i-1], TABLE_SIZE);
+			i++;
+		}
 //		/*”паковка массива в файл
 //		и распаковка всего оного чуда
 //*/
@@ -170,6 +177,8 @@ int main(int argc, char *argv[]){
 		char *str_file1 = (char *)malloc(dataSize * sizeof(char));
 		char* out_str1 = (char*)malloc(dataSize * sizeof(char));
 		unsigned int *out_code_value = (unsigned int *)malloc(TABLE_SIZE * sizeof(unsigned int));
+		for (int i = 0; i < dataSize; i++)
+			out_str1[i] = 0;
 
 		MPI_Recv(str_file1, dataSize, MPI_CHAR, 0, 0, MPI_COMM_WORLD, &status);//прин€ли строку
 
@@ -190,7 +199,6 @@ int main(int argc, char *argv[]){
 	free(prefix_code);
 	free(append_character);
 
-	//MPI_Type_free(&StructTable);
 	MPI_Finalize();
 	return 0;
 }
