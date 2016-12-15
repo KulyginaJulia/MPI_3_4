@@ -1,0 +1,4 @@
+﻿C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (MPI_3_4.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Function.cpp
+c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4\function.cpp(70): warning C4101: 'counter': unreferenced local variable
+  MPI_3_4.vcxproj -> C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\Debug\MPI_3_4Consistent.lib
