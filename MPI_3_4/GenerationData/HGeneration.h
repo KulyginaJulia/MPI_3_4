@@ -7,6 +7,6 @@
 #include "string.h"
 
 void Generation(long int N);
-//bool Testing(FILE* A, FILE* B, int count);
+void Initial_dictonary(unsigned int * code_value, unsigned int* p_prefix_code, unsigned char *p_append_character);
 
 #endif

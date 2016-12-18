@@ -1,6 +1,27 @@
-﻿  main.cpp
-  Generating code
-  All 19 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  MPI_3_4Parallel.vcxproj -> C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\Release\MPI_3_4Parallel.exe
-  MPI_3_4Parallel.vcxproj -> C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\Release\MPI_3_4Parallel.pdb (Full PDB)
+﻿  main.c
+C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\MPI_3_4Parallel\Header.h(16): warning C4031: second formal parameter list longer than the first list
+C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\MPI_3_4Parallel\Header.h(16): warning C4028: formal parameter 1 different from declaration
+C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\MPI_3_4Parallel\Header.h(16): warning C4142: 'find_match': benign redefinition of type
+  c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4\Function.h(25): note: see declaration of 'find_match'
+C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\MPI_3_4Parallel\Header.h(18): warning C4031: second formal parameter list longer than the first list
+C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\MPI_3_4Parallel\Header.h(18): warning C4028: formal parameter 1 different from declaration
+C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\MPI_3_4Parallel\Header.h(18): error C2040: 'output_code': 'char *(char *,unsigned int,int)' differs in levels of indirection from 'char *(char *,unsigned int,int)'
+..\MPI_3_4\main.c(8): error C2372: 'code_value': redefinition; different types of indirection
+  c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4\Function.h(15): note: see declaration of 'code_value'
+..\MPI_3_4\main.c(9): error C2372: 'prefix_code': redefinition; different types of indirection
+  c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4\Function.h(16): note: see declaration of 'prefix_code'
+..\MPI_3_4\main.c(10): error C2372: 'append_character': redefinition; different types of indirection
+  c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4\Function.h(17): note: see declaration of 'append_character'
+..\MPI_3_4\main.c(168): warning C4047: 'function': 'unsigned int *' differs in levels of indirection from 'unsigned int *[4096]'
+..\MPI_3_4\main.c(168): warning C4024: 'compress': different types for formal and actual parameter 5
+..\MPI_3_4\main.c(168): warning C4047: 'function': 'unsigned char *' differs in levels of indirection from 'unsigned char *[4096]'
+..\MPI_3_4\main.c(168): warning C4024: 'compress': different types for formal and actual parameter 6
+..\MPI_3_4\main.c(168): warning C4024: 'compress': different types for formal and actual parameter 7
+  Source.c
+c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4parallel\Header.h(16): warning C4031: second formal parameter list longer than the first list
+c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4parallel\Header.h(16): warning C4028: formal parameter 1 different from declaration
+c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4parallel\Header.h(16): warning C4142: 'find_match': benign redefinition of type
+  C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\MPI_3_4\Function.h(25): note: see declaration of 'find_match'
+c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4parallel\Header.h(18): warning C4031: second formal parameter list longer than the first list
+c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4parallel\Header.h(18): warning C4028: formal parameter 1 different from declaration
+c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4parallel\Header.h(18): error C2040: 'output_code': 'char *(char *,unsigned int,int)' differs in levels of indirection from 'char *(char *,unsigned int,int)'

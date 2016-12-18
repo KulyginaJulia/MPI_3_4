@@ -1,10 +1,6 @@
-﻿  main.cpp
-c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4\main.cpp(152): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  GenerationData.lib(SGeneration.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
-LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
-main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  Generating code
-  Finished generating code
+﻿  Source.cpp
+  main.cpp
+c:\users\julia\documents\visual studio 2015\projects\mpi_3_4\mpi_3_4\main.cpp(112): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
   MPI_3_4Parallel.vcxproj -> C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\Debug\MPI_3_4Parallel.exe
   MPI_3_4Parallel.vcxproj -> C:\Users\Julia\Documents\Visual Studio 2015\Projects\MPI_3_4\Debug\MPI_3_4Parallel.pdb (Full PDB)
